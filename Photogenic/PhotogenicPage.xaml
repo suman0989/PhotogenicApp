@@ -1,4 +1,32 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:Photogenic" x:Class="Photogenic.PhotogenicPage">
-	<Label Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+	xmlns:local="clr-namespace:Photogenic" 
+	x:Class="Photogenic.PhotogenicPage">
+<StackLayout x:Name="upperStack" Padding="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
+		<Image Source="trolltunga.jpg"  HorizontalOptions="Center"/>
+		<ScrollView x:Name="userscroll" 
+		VerticalOptions="CenterAndExpand" 
+		HorizontalOptions="FillAndExpand" >
+
+		<StackLayout Padding="10,10,10,10"
+		VerticalOptions="CenterAndExpand" 
+		HorizontalOptions="FillAndExpand" 
+		BackgroundColor="White">
+		<Image Source="logo"/>
+		<Entry  x:Name="fName" Placeholder="First Name" WidthRequest="150" />	
+		<Entry  x:Name="lName" Placeholder="Last Name" WidthRequest="150" />	
+		<Entry  x:Name="email"  Keyboard="Email" Placeholder="Email" WidthRequest="150" />	
+		<Entry  x:Name="mobile" Keyboard="Telephone" Placeholder="Mobile Number" WidthRequest="150" />	
+		<Entry  x:Name="pswd" IsPassword="true"  Placeholder="Password" WidthRequest="150" />	
+		<Entry  x:Name="cnfPswd" IsPassword="true" Placeholder="Confirm Password" WidthRequest="150" />	
+
+		<Button Margin="20" Clicked="signUpAction" BackgroundColor="Maroon" TextColor="White" Text="Sign Up"/>
+	
+</StackLayout>
+</ScrollView>
+
+</StackLayout>
+
+	
 </ContentPage>
