@@ -13,6 +13,14 @@ namespace Photogenic
 		public PhotogenicPage()
 		{
 			InitializeComponent();
+
+			//var imageList = new Image[3];
+			//imageList[0].Source = ImageSource.FromFile("mainimg1.jpeg");
+			//imageList[1].Source = ImageSource.FromFile("mainimg2.jpeg");
+			//imageList[2].Source = ImageSource.FromFile("mainimg3.jpeg");
+
+
+			//ImagesListViews.Children.Add(Image.s,j,0);
 		}
 
 		void signUpAction(object sender, System.EventArgs e)

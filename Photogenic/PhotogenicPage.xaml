@@ -1,31 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage x:Name="signupContentPage" xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 	xmlns:local="clr-namespace:Photogenic" 
-	x:Class="Photogenic.PhotogenicPage">
-<StackLayout x:Name="upperStack" Padding="0,20,0,0" HorizontalOptions="FillAndExpand" VerticalOptions="CenterAndExpand">
-		<Image Source="trolltunga.jpg"  HorizontalOptions="Center"/>
+	x:Class="Photogenic.PhotogenicPage" BackgroundImage="back.jpeg">
+<StackLayout x:Name="upperStack"
+		Margin="20"
+		Padding="0,0,0,0" 
+		HorizontalOptions="FillAndExpand"
+		VerticalOptions="StartAndExpand" BackgroundColor="Transparent">
+
 		<ScrollView x:Name="userscroll" 
 		VerticalOptions="CenterAndExpand" 
-		HorizontalOptions="FillAndExpand" >
+		HorizontalOptions="FillAndExpand" BackgroundColor="Transparent">
 
 		<StackLayout Padding="10,10,10,10"
 		VerticalOptions="CenterAndExpand" 
 		HorizontalOptions="FillAndExpand" 
-		BackgroundColor="White">
+		BackgroundColor="Transparent">
 		<Image Source="logo"/>
-		<Entry  x:Name="fName" Placeholder="First Name" WidthRequest="150" />	
-		<Entry  x:Name="lName" Placeholder="Last Name" WidthRequest="150" />	
-		<Entry  x:Name="email"  Keyboard="Email" Placeholder="Email" WidthRequest="150" />	
-		<Entry  x:Name="mobile" Keyboard="Telephone" Placeholder="Mobile Number" WidthRequest="150" />	
-		<Entry  x:Name="pswd" IsPassword="true"  Placeholder="Password" WidthRequest="150" />	
-		<Entry  x:Name="cnfPswd" IsPassword="true" Placeholder="Confirm Password" WidthRequest="150" />	
+		<Entry  x:Name="fName" Placeholder="First Name" PlaceholderColor="Black" WidthRequest="150" />	
+		<Entry  x:Name="lName" Placeholder="Last Name" PlaceholderColor="Black" WidthRequest="150" />	
+		<Entry  x:Name="email"  Keyboard="Email" Placeholder="Email"  PlaceholderColor="Black" WidthRequest="150" />	
+		<Entry  x:Name="mobile" Keyboard="Telephone" Placeholder="Mobile Number" PlaceholderColor="Black" WidthRequest="150" />	
+		<Entry  x:Name="pswd" IsPassword="true"  Placeholder="Password" PlaceholderColor="Black" WidthRequest="150" />	
+		<Entry  x:Name="cnfPswd" IsPassword="true" Placeholder="Confirm Password" PlaceholderColor="Black" WidthRequest="150" />	
 
 		<Button Margin="20" Clicked="signUpAction" BackgroundColor="Maroon" TextColor="White" Text="Sign Up"/>
 	
 </StackLayout>
 </ScrollView>
-
 </StackLayout>
 
 	
