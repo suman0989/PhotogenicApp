@@ -8,7 +8,7 @@ namespace Photogenic
 		{
 			InitializeComponent();
 
-			MainPage = new PhotogenicPage();
+			MainPage = new PhotoGenicSignInPage();
 		}
 
 		protected override void OnStart()

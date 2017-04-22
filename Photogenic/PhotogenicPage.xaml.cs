@@ -36,9 +36,9 @@ namespace Photogenic
      }
 
 */
-			UserModel user = new UserModel(fName.Text, lName.Text, email.Text, mobile.Text, pswd.Text);
+			//UserModel user = new UserModel(fName.Text, lName.Text, email.Text, mobile.Text, pswd.Text);
 
-			DisplayAlert("SignUp Success", "Welcome \n" + user.fName +" "+ user.lName , "Ok");
+			//DisplayAlert("SignUp Success", "Welcome \n" + user.fName +" "+ user.lName , "Ok");
 		}
 	}
 }
