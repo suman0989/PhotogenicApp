@@ -26,11 +26,11 @@ namespace Photogenic
 					var postData = new List<KeyValuePair<string, string>>();
 					postData.Add(new KeyValuePair<string, string>("email", email));
 					postData.Add(new KeyValuePair<string, string>("pass", password));
-					postData.Add(new KeyValuePair<string, string>("appKey", "#455rgrgr!@tt^&eqq1dd"));
+					postData.Add(new KeyValuePair<string, string>("appKey", PhotogenicConfiguration.APP_KEY));
 
 					var content = new System.Net.Http.FormUrlEncodedContent(postData);
 
-					var url = "http://www.freshzbyte.com/api/call/users";
+					var url = PhotogenicConfiguration.API_URL+"/users";
 					var result = client.PostAsync(url, content).Result;
 					if (result.IsSuccessStatusCode){
 						try{
@@ -48,10 +48,7 @@ namespace Photogenic
 								else{
 									Debug.WriteLine("Login Success: {0}", user.first_name+user.last_name);
 									//share login data ....
-									SharedVariables.Default.userid = user.user_id;
-									SharedVariables.Default.emailId = user.email;
-									SharedVariables.Default.name = user.first_name;
-
+									SharedVariables.Default.curreentUser = user;
 									return true;
 								}
 							}
@@ -60,6 +57,9 @@ namespace Photogenic
 							}
 						}
 						catch (Exception exp){
+							var dataString = result.Content.ReadAsStringAsync().Result;
+							var errorData = Newtonsoft.Json.JsonConvert.DeserializeObject<LoginErrorModel>(dataString);
+							Debug.WriteLine("Error: {0}", errorData.message);
 							Debug.WriteLine("Error: {0}", exp);
 							return false;
 						}

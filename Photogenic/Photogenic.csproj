@@ -5,7 +5,6 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{A5AF68ED-0270-48FE-B943-9C84AF9EBC29}</ProjectGuid>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <UseMSBuildEngine>true</UseMSBuildEngine>
     <OutputType>Library</OutputType>
     <RootNamespace>Photogenic</RootNamespace>
     <AssemblyName>Photogenic</AssemblyName>
@@ -47,6 +46,7 @@
     </Compile>
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="WebService.cs" />
+    <Compile Include="Properties\PhotogenicGlobal.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

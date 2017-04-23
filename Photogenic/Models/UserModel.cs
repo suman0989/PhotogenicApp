@@ -23,7 +23,6 @@ namespace Photogenic
 	//}
 
 
-
 	public class UserModel
 	{
 		public string user_id { get; set; }
@@ -50,9 +49,6 @@ namespace Photogenic
 	{
 		// this is the default static instance you'd use like string text = Settings.Default.SomeSetting;
 		public readonly static SharedVariables Default = new SharedVariables();
-		public string name { get; set; } // add shared value properties as you wish
-		public string userid { get; set; }
-		public string mobileNumber { get; set; }
-		public string emailId { get; set; }
+		public UserModel curreentUser { get; set; }
 	}
 }
