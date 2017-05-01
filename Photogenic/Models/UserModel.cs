@@ -3,25 +3,14 @@ using System.Collections.Generic;
 
 namespace Photogenic
 {
-	//public class UserModel
-	//{
-	//	public string fName { get; set; }
-	//	public string lName { get; set; }
-	//	public	string emailId { get; set; }
-	//	public	string passWord { get; set; }
-	//	public	string mobileNumber { get; set; }
+	
 
-
-	//	public UserModel(string firstName, String lastName, String email, string mobileNumber, string pswd)
-	//	{
-	//		fName = firstName;
-	//		lName = lastName;
-	//		emailId = email;
- //           passWord = pswd;
-
-	//	}
-	//}
-
+public class VeggieViewModel
+{
+	public string Name { get; set; }
+	public string Type { get; set; }
+	public string Image { get; set; }
+}
 
 	public class UserModel
 	{

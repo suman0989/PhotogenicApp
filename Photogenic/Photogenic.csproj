@@ -32,6 +32,9 @@
     <EmbeddedResource Include="PhotoGenicSignInPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="PhotoGenicHomePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -47,6 +50,9 @@
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="WebService.cs" />
     <Compile Include="Properties\PhotogenicGlobal.cs" />
+    <Compile Include="PhotoGenicHomePage.xaml.cs">
+      <DependentUpon>PhotoGenicHomePage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">

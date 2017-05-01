@@ -12,26 +12,49 @@ namespace Photogenic
 		WebService service = new WebService();
 		public PhotoGenicSignInPage(){
 			InitializeComponent();
+
 		}
 
-		void signupAction(object sender, System.EventArgs e){
-			if (email.Text != string.Empty || pswd.Text != string.Empty){
-				bool result = service.checkUserLogin(email.Text, pswd.Text);
+		void  signupAction(object sender, System.EventArgs e){
 
-				if (result == true){
-					DisplayAlert("Signin Success", "Welcome, " + SharedVariables.Default.curreentUser.first_name, "Ok");
-				}
-				else{
-                    DisplayAlert("Signin Failed", "Wrong username or password", "Ok");
-				}
+			if (email.Text != null && pswd.Text != null){
+				callSignInAPI();
 			}
 			else{
-				DisplayAlert("Signin Failed", "Please enter email and password", "Ok");
+                DisplayAlert("Please enter your email and password","", "Ok");
 			}
+		}
+
+		void callSignInAPI(){
+			bool result = false;
+			activity.IsVisible = true;
+			activity.IsRunning = true;
+			email.IsEnabled = false;
+			pswd.IsEnabled = false;
+			signinbtn.IsEnabled = false;
+			signupbtn.IsEnabled = false;
+			Task.Factory.StartNew (() => {
+                result = service.checkUserLogin(email.Text, pswd.Text);
+			}).ContinueWith(task => {
+				activity.IsVisible = false;
+				activity.IsRunning = false;
+				email.IsEnabled = true;
+				pswd.IsEnabled = true;
+				signinbtn.IsEnabled = true;
+				signupbtn.IsEnabled = true;
+				if (result == true){
+					Navigation.PushModalAsync(new PhotoGenicHomePage());
+				}
+				else{
+					DisplayAlert("Signin Failed", "Wrong username or password", "Ok");
+				}
+			}, TaskScheduler.FromCurrentSynchronizationContext ());
 		}
 
 		async void pushToSignUp(object sender, System.EventArgs e){
 			await Navigation.PushModalAsync(new PhotogenicPage());
 		}
+
+
 	}
 }

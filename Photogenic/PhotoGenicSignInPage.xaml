@@ -20,9 +20,10 @@
 		BackgroundColor="Transparent">
 		<Entry  x:Name="email" Margin = "0,20,10,10"   Keyboard="Email" Placeholder="Email"  PlaceholderColor="Black" WidthRequest="150" />	
 		<Entry  x:Name="pswd" IsPassword="true"  Placeholder="Password" PlaceholderColor="Black" WidthRequest="150" />	
+		<ActivityIndicator x:Name="activity" IsVisible="false" IsRunning="false" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
 
-		<Button Margin="20" Clicked="signupAction"  BackgroundColor="Maroon" TextColor="White" Text="Sign In"/>
-	   	<Button Margin="20" Clicked="pushToSignUp" BackgroundColor="Transparent" TextColor="White" Text="Don't have account SignUP"/>
+		<Button x:Name="signinbtn" Margin="20" Clicked="signupAction"  BackgroundColor="Maroon" TextColor="White" Text="Sign In"/>
+	   	<Button x:Name="signupbtn" Margin="20" Clicked="pushToSignUp" BackgroundColor="Transparent" TextColor="White" Text="Don't have account SignUP"/>
 
 </StackLayout>
 </ScrollView>
