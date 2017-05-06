@@ -26,7 +26,7 @@
 		<Entry  x:Name="cnfPswd" IsPassword="true" Placeholder="Confirm Password" PlaceholderColor="Black" WidthRequest="150" />	
 	    <ActivityIndicator x:Name="activity" IsVisible="false" IsRunning="false" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
 
-		<Button x:Name="signupbtn" Margin="20" Clicked="signUpAction" BackgroundColor="Maroon" TextColor="White" Text="Sign Up"/>
+		<Button x:Name="signupbtn" BorderRadius="10" Margin="20" Clicked="signUpAction" BackgroundColor="Maroon" TextColor="White" Text="Sign Up"/>
 	
 </StackLayout>
 </ScrollView>

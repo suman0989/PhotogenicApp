@@ -1,0 +1,30 @@
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              x:Class="Photogenic.IntroductionPage" BackgroundColor="Silver">
+    <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage>
+                <ContentPage.Padding>
+                    <OnPlatform x:TypeArguments="Thickness" iOS="0,40,0,0" Android="8,0,-5,0" />
+                </ContentPage.Padding>
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                     <AbsoluteLayout>
+						<Image x:Name = "carouselImg" Source="{Binding carouselImage}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+					</AbsoluteLayout>
+
+					<StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand">
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+					</StackLayout>
+					<StackLayout Orientation="Horizontal" VerticalOptions="End">
+                    <Label Text="{Binding carouselInformation}" FontSize="Medium" HorizontalOptions="CenterAndExpand"/>
+					<Button x:Name="signinBtn" Text="Sign IN" BackgroundColor="Maroon" BorderRadius="5" HorizontalOptions="CenterAndExpand"/>
+					</StackLayout>
+					 </StackLayout>
+           
+	
+					
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>

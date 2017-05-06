@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ContentPage x:Name="signInContentPag" xmlns="http://xamarin.com/schemas/2014/forms" 
 	xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-	xmlns:local="clr-namespace:Photogenic" 
+	xmlns:local="clr-namespace:Photogenic"
 	x:Class="Photogenic.PhotoGenicSignInPage" BackgroundImage="back.jpeg">
 <StackLayout x:Name="upperStack"
 		Margin="20"
@@ -18,11 +18,11 @@
 		VerticalOptions="CenterAndExpand" 
 		HorizontalOptions="FillAndExpand" 
 		BackgroundColor="Transparent">
-		<Entry  x:Name="email" Margin = "0,20,10,10"   Keyboard="Email" Placeholder="Email"  PlaceholderColor="Black" WidthRequest="150" />	
-		<Entry  x:Name="pswd" IsPassword="true"  Placeholder="Password" PlaceholderColor="Black" WidthRequest="150" />	
+		<Entry x:Name="email" Margin = "0,20,10,10"   Keyboard="Email" Placeholder="Email"   PlaceholderColor="Black" WidthRequest="150" />	
+		<local:PhotoGenicEntry  x:Name="pswd" IsPassword="true"  Placeholder="Password" PlaceholderColor="Black" WidthRequest="150" />	
 		<ActivityIndicator x:Name="activity" IsVisible="false" IsRunning="false" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-
-		<Button x:Name="signinbtn" Margin="20" Clicked="signupAction"  BackgroundColor="Maroon" TextColor="White" Text="Sign In"/>
+	
+		<Button x:Name="signinbtn" BorderRadius="10" Margin="20" Clicked="signupAction"  BackgroundColor="Maroon" TextColor="White" Text="Sign In"/>
 	   	<Button x:Name="signupbtn" Margin="20" Clicked="pushToSignUp" BackgroundColor="Transparent" TextColor="White" Text="Don't have account SignUP"/>
 
 </StackLayout>

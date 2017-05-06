@@ -14,7 +14,6 @@ namespace Photogenic
 
             DisplayAlert("Welcome!!!", SharedVariables.Default.curreentUser.first_name, "Ok");
 
-
             veggies = new ObservableCollection<VeggieViewModel> ();
 			veggies.Add (new VeggieViewModel{ Name="Tomato", Type="Fruit", Image="demo1.jpeg"});
 			veggies.Add (new VeggieViewModel{ Name="Romaine Lettuce", Type="Vegetable", Image="demo2.jpg"});

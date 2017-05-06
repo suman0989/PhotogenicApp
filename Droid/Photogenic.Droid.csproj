@@ -84,6 +84,12 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.2.3.3.193\lib\MonoAndroid10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Controls.FloatingLabelEntry.Android">
+      <HintPath>..\packages\Plugin.Controls.FloatingLabelEntry.0.2.2\lib\MonoAndroid10\Plugin.Controls.FloatingLabelEntry.Android.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Controls.FloatingLabelEntry">
+      <HintPath>..\packages\Plugin.Controls.FloatingLabelEntry.0.2.2\lib\MonoAndroid10\Plugin.Controls.FloatingLabelEntry.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Photogenic\Photogenic.csproj">
@@ -95,6 +101,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CutomEntryRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -119,6 +126,12 @@
     <AndroidResource Include="Resources\drawable\demo1.jpeg" />
     <AndroidResource Include="Resources\drawable\demo2.jpeg" />
     <AndroidResource Include="Resources\drawable\demo3.jpeg" />
+    <AndroidResource Include="Resources\drawable\intro1.jpeg" />
+    <AndroidResource Include="Resources\drawable\intro2.jpeg" />
+    <AndroidResource Include="Resources\drawable\intro3.jpeg" />
+    <AndroidResource Include="Resources\drawable\intro4.jpeg" />
+    <AndroidResource Include="Resources\drawable\intro5.jpeg" />
+    <AndroidResource Include="Resources\drawable\intro6.jpeg" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets" Condition="Exists('..\packages\Xamarin.Android.Support.Vector.Drawable.23.3.0\build\Xamarin.Android.Support.Vector.Drawable.targets')" />

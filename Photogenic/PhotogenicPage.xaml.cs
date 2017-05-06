@@ -45,6 +45,7 @@ namespace Photogenic
 			activity.IsVisible = true;
 			activity.IsRunning = true;
 			setTextFieldEnable(false);
+
 			Task.Factory.StartNew (() => {
 				result = service.signUpUser(email.Text, fName.Text, lName.Text, pswd.Text);
 			}).ContinueWith(task => {

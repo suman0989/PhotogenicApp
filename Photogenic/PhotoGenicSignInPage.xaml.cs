@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 namespace Photogenic
 {
 	public partial class PhotoGenicSignInPage : ContentPage
@@ -12,7 +11,6 @@ namespace Photogenic
 		WebService service = new WebService();
 		public PhotoGenicSignInPage(){
 			InitializeComponent();
-
 		}
 
 		void  signupAction(object sender, System.EventArgs e){

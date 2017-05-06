@@ -35,6 +35,9 @@
     <EmbeddedResource Include="PhotoGenicHomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="IntroductionPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App.xaml.cs">
@@ -53,6 +56,11 @@
     <Compile Include="PhotoGenicHomePage.xaml.cs">
       <DependentUpon>PhotoGenicHomePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CustomControlClass.cs" />
+    <Compile Include="IntroductionPage.xaml.cs">
+      <DependentUpon>IntroductionPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\IntroductionPageModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Xamarin.Forms.Core">
@@ -69,6 +77,9 @@
     </Reference>
     <Reference Include="nunit.framework">
       <HintPath>..\packages\NUnit.3.6.1\lib\portable-net45+win8+wp8+wpa81\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Controls.FloatingLabelEntry">
+      <HintPath>..\packages\Plugin.Controls.FloatingLabelEntry.0.2.2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Plugin.Controls.FloatingLabelEntry.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
